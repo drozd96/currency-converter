@@ -6,11 +6,10 @@ import converter.CurrencyConverter
 import server.model.CustomJsonSupport
 import akka.http.scaladsl.model.HttpResponse
 import akka.http.scaladsl.model.StatusCodes._
+import akka.http.scaladsl.marshallers.sprayjson.SprayJsonSupport._
 import scala.util.{Failure, Success}
 
 object ConvertCurrencyRoute extends Directives with CustomJsonSupport {
-
-  import akka.http.scaladsl.marshallers.sprayjson.SprayJsonSupport._
 
   val currencyRoute: Route =
     path("convert") {

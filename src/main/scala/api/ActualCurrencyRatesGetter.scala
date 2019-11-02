@@ -7,9 +7,9 @@ import server.model.rates.CurrencyRates
 import scala.io.Source
 import scala.util.Try
 
-object ActualCurrencyRatesGetter extends CustomJsonSupport {
+import spray.json._
 
-  import spray.json._
+object ActualCurrencyRatesGetter extends CustomJsonSupport {
 
   private val config = ConfigFactory.load()
 
